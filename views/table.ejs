@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include custom CSS (optional) -->
+    <style>
+        /* Add custom styles here if needed */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Contact List</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% userData.forEach(user => { %>
+                    <tr>
+                      <td><%= user.name %></td>
+                      <td><%= user.email %></td>
+                      <td><%= user.phone %></td>
+                    </tr>
+                <% }); %>
+                <!-- <tr>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>janesmith@example.com</td>
+                    <td>987-654-3210</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>bobjohnson@example.com</td>
+                    <td>555-123-4567</td>
+                </tr>
+                <tr>
+                    <td>Alice Brown</td>
+                    <td>alicebrown@example.com</td>
+                    <td>777-888-9999</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
