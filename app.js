@@ -19,7 +19,7 @@ app.post('/post-form', async (req, res) => {
     pno = req.body.pno;
     console.log(personname, email, pno);
     const sqlQuery = "INSERT INTO contacts (name, email, phone) VALUES ('"+ personname+ "', '"+ email + "', '" + pno + "')";
-    await pool.query(sqlQuery, (err, result) => {
+    await pool.query(sqlQuery, async (err, result) => {
         // console.log(result);
         if(err) console.log(err);
         const Query = "Select * from contacts";
