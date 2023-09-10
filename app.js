@@ -22,14 +22,14 @@ app.post('/post-form', async (req, res) => {
     await pool.query(sqlQuery, (err, result) => {
         // console.log(result);
         if(err) console.log(err);
-    })
-    const Query = "Select * from contacts";
-    await pool.query(Query, (err, result) => {
-        // console.log(result);
-        if(err) res.send(err);
-        var s = JSON.stringify(result);
-        const userData = JSON.parse(s);
-        res.render('home', { userData });
+        const Query = "Select * from contacts";
+        await pool.query(Query, (err, result) => {
+            // console.log(result);
+            if(err) res.send(err);
+            var s = JSON.stringify(result);
+            const userData = JSON.parse(s);
+            res.render('home', { userData });
+        })
     })
     
 });
